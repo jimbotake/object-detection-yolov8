@@ -2,3 +2,4 @@ streamlit
 torch>=1.7
 Pillow
 opencv-python
+ultralytics
