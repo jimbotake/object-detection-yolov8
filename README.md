@@ -23,7 +23,7 @@ Aplikasi ini memungkinkan pengguna mengupload gambar dan mendapatkan prediksi bo
 
 ## Usage
 
-- Upload gambar melalui aplikasi web Streamlit.
+- Upload gambar melalui aplikasi web Streamlit. https://jimbotake-object-detection-yolov8.streamlit.app/
 - Model YOLOv8 akan menampilkan bounding box dan label objek yang terdeteksi di gambar.
 - Lihat prediksi kelas dan confidence score secara interaktif.
 
@@ -34,7 +34,7 @@ Distributed under the MIT License.
 ## Contact
 
 Your Name - dimasony.dewantara@gmail.com  
-Project Link: https://github.com/jimbotake/trash-classifier
+Project Link: https://github.com/jimbotake/object-detection-yolov8
 
 ## Dataset Citation
 
