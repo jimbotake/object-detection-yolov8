@@ -1,6 +1,6 @@
-# Object Detection YOLOv5
+# Object Detection YOLOv8
 
-Aplikasi deteksi objek menggunakan algoritma YOLOv5 (pretrained pada COCO dataset). Dibangun dengan Python dan Streamlit, dan siap untuk di-deploy ke Streamlit Cloud.
+Aplikasi deteksi objek menggunakan algoritma YOLOv8 (pretrained pada COCO dataset). Dibangun dengan Python dan Streamlit, dan siap untuk di-deploy ke Streamlit Cloud.
 
 ## 🚀 Cara Menjalankan
 
