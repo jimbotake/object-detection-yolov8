@@ -27,6 +27,11 @@ Aplikasi ini memungkinkan pengguna mengupload gambar dan mendapatkan prediksi bo
 - Model YOLOv8 akan menampilkan bounding box dan label objek yang terdeteksi di gambar.
 - Lihat prediksi kelas dan confidence score secara interaktif.
 
+## Visualisasi
+Berikut Tampilan Aplikasi
+![Tampilan Aplikasi](images/capture_aplikasi.png)
+
+
 ## License
 
 Distributed under the MIT License.
