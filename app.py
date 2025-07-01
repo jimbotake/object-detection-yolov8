@@ -1,24 +1,24 @@
 import streamlit as st
 from PIL import Image
-import torch
+from ultralytics import YOLO
+import numpy as np
 
 @st.cache_resource
 def load_model():
-    # Gunakan YOLOv5 versi 6.2 agar tidak butuh ultralytics
-    return torch.hub.load('ultralytics/yolov5:v6.2', 'yolov5s', pretrained=True)
+    return YOLO("yolov8n.pt")  # Gunakan model ringan: yolov8n.pt
 
 model = load_model()
 
-st.title("🎯 Object Detection dengan YOLOv5")
-st.write("Upload gambar untuk mendeteksi objek.")
+st.title("🎯 Deteksi Objek dengan YOLOv8")
+st.write("Upload gambar untuk mendeteksi objek menggunakan model YOLOv8.")
 
 uploaded_file = st.file_uploader("Unggah gambar", type=["jpg", "jpeg", "png"])
 if uploaded_file is not None:
-    image = Image.open(uploaded_file).convert("RGB")  # Konversi agar tidak error pada PNG
+    image = Image.open(uploaded_file).convert("RGB")
     st.image(image, caption="Gambar yang diunggah", use_column_width=True)
 
     with st.spinner("Mendeteksi objek..."):
-        results = model(image)
-        results.render()  # menggambar box ke dalam image
+        results = model(image)  # Deteksi
+        result_image = results[0].plot()  # Gambar hasil deteksi
 
-    st.image(results.ims[0], caption="Hasil Deteksi", use_column_width=True)
+    st.image(result_image, caption="Hasil Deteksi", use_column_width=True)
